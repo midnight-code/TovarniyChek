@@ -1,0 +1,14 @@
+﻿<Window x:Class="TovarniyChek.NewRekviziti"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="NewRekviziti" Height="615" Width="828">
+    <Grid>
+        <Label Content="Название организации" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="128"/>
+        <Label Content="Юридический адресс" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Width="128"/>
+        <Label Content="ИНН" HorizontalAlignment="Left" Margin="10,72,0,0" VerticalAlignment="Top" Width="128"/>
+        <Label Content="КПП" HorizontalAlignment="Left" Margin="10,103,0,0" VerticalAlignment="Top" Width="128"/>
+            <RadioButton Margin="162,182,-142,-162" Content="Not checked"/>
+            <RadioButton IsChecked="True" Margin="162,206,-142,-206" Content="Checked"/>
+        <Label Content="Название организации" HorizontalAlignment="Left" Margin="12,179,0,0" VerticalAlignment="Top" Width="138"/>
+    </Grid>
+</Window>

@@ -1,0 +1,44 @@
+﻿<Window x:Class="TovarniyChek.Kontragent"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Контрагенты" Height="417" Width="768">
+    <Grid>
+        <DataGrid AutoGenerateColumns="False" HorizontalAlignment="Stretch"
+          Name="KontrogentDataGrid" VerticalAlignment="Stretch" RowHeight="30" 
+         AlternatingRowBackground="#02000000" Margin="10,63,10,10" BorderThickness="3"
+          ItemsSource="{Binding}" SelectionChanged="MatchsDataGrid_SelectionChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Path=name}" Header="Организация" Width="150" IsReadOnly="True" />
+                <DataGridTextColumn Binding="{Binding Path=Adress}" Header="Юр. адресс" Width="230" IsReadOnly="True" />
+                <DataGridTextColumn Binding="{Binding Path=inn}" Header="ИНН" Width="50" IsReadOnly="True" />
+                <DataGridTextColumn Binding="{Binding Path=kpp}" Header="КПП" IsReadOnly="True" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Content="Новый" HorizontalAlignment="Left" Margin="628,22,0,0" VerticalAlignment="Top" Width="114" RenderTransformOrigin="0.5,0.5" OpacityMask="#FFD8B9B9" Foreground="White" Height="26" Click="Button_Click_1">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="1" ScaleX="1"/>
+                    <SkewTransform AngleY="0" AngleX="0"/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+            <Button.Effect>
+                <DropShadowEffect RenderingBias="Quality"/>
+            </Button.Effect>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="White" Offset="0.0"/>
+                    <GradientStop Color="#FF6E6C6C" Offset="1.0"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <TextBox HorizontalAlignment="Left" Height="26" Margin="135,25,0,0" TextWrapping="Wrap" Text="Введите ИНН или название организации" VerticalAlignment="Top" Width="477"/>
+        <Grid Height="28" Width="28" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,4,0">
+            <Path Width="20.7781" Height="20.7781" Stretch="Fill" Fill="{StaticResource FillPath}" Data="{StaticResource magnifyStyle0}" Margin="-138.39,-147.39,145.61,154.61" />
+        </Grid>
+        <Label Content="Поиск" HorizontalAlignment="Left" Margin="71,26,0,0" VerticalAlignment="Top" Width="48"/>
+        <Image Margin="10,14,710,335" Source="Image1.png" Stretch="Fill" RenderTransformOrigin="0.775,0.842"/>
+
+    </Grid>
+</Window>
